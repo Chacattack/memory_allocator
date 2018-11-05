@@ -1,0 +1,46 @@
+//USAGE: ./runsal < sal_test
+//All these tests are NOT offical test
+//You have been warned
+//allocator.c breaking test by Roger Tsang
++ a 13 //(32)
+* a 13
++ b 143 //(256)
+* b 349
++ c 1642 //(2048)
+* c 14323
++ d 132 //(256)
+* d 6123
++ e 256 //(512)
+* e 123
++ f 31 //(64)
+* f 17
++ g 1  //(32)
+* g 7
++ h 36 //(64)
+* h 153 
++ i 26 //(64)
+* i 1024
++ j 110 //(128)
+* j 90
++ k 109 //(128)
+* k 1
++ l 274 //(512)
+* l 132 //You have passed: sal_malloc
+! //Congratulation: Your memory should be fully occupied
+- b
+- c
+- a
+- d
+- e
+- f
+- h
+- g
+- j
+- i
+- l
+- k //You have passed: sal_free
+! //Congratulation Again: You are awesome
+! //^ check if there is only 1 piece of memory with size [4096]
++ a 4000 //If there is no error. You are dangerously awesome.
+* a 1 //It depends on your strategy on memory distribution.
+- a //You are still awesome if you haven't passed the last test:)

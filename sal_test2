@@ -1,0 +1,77 @@
+//USAGE: ./runsal < sal_test
+//These is NOT an offical test
+//You have been warned
++ a 13   // 32   32
++ b 153  // 256  288
++ c 132  // 256  544
++ d 632  // 1024 1568
++ e 16   // 32   1600
++ f 110  // 128  1728
++ g 1000 // 1024 2752
++ h 251  // 512  3264
++ i 48   // 64   3328 
++ j 89   // 128  3456
++ k 32   // 64   3520
++ l 100  // 128  3648
++ m 200  // 256  3904
++ n 100  // 128  4032
++ o 10   // 32   4064
++ p 10   // this one should fail.
+! //a block of 32BYTES left
+- d
+- a
+- b
+- c
+- f
+- e
+- g
+- i
+- h
+- n
+- o
+- l
+- m
+- j
+- k
+- p //This one should fail
+! //a block of 4096 BYTES left
++ a 4000 //You should fail this one
++ a 0    //This should be prohibited
+* a 10   //Otherwise, your memory will be corrupted.
++ a 13   // 32   32
++ b 153  // 256  288
++ c 132  // 256  544
++ d 632  // 1024 1568
++ e 16   // 32   1600
++ f 110  // 128  1728
++ g 1000 // 1024 2752
++ h 251  // 512  3264
++ i 48   // 64   3328 
++ j 89   // 128  3456
++ k 32   // 64   3520
++ l 100  // 128  3648
++ m 200  // 256  3904
++ n 100  // 128  4032
++ o 10   // 32   4064
++ p 10   // this one should fail.
+! //a block of 32BYTES left
+- d
+- a
+- b
+- c
+- f
+- e
+- g
+- i
+- h
+- n
+- o
+- l
+- m
+- j
+- k
+- p //This one should fail
+! //a block of 4096 BYTES left
++ a 4000 //You should fail this one
++ a 0    //This should be prohibited
+* a 10   //Otherwise, your memory will be corrupted.
